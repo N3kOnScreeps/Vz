@@ -1,0 +1,30 @@
+#header{
+	text-align: center;
+	font-size: 3.5em;
+	position: fixed;
+	top: 0;
+	width:100%;
+}
+
+#playerwrap{
+	text-align: center;
+}
+
+#visualizer{
+	text-align: center;
+	position: absolute;
+	top:0;
+	width: 100%;
+	height:100%;
+}
+
+#contentwrapper{
+	border-radius: 20px;
+	background: black;
+	border:1px solid red;
+	max-width:800px;
+	width:100%;
+	min-height: 1200px;
+	margin: 600px auto 10px;
+
+}
