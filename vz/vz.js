@@ -2,6 +2,7 @@
 
   function Vz( canvasEl, audioEl ) {
     this.initCanvas( canvasEl );
+    this.initAudioAnalyser(audioEl);
   }
 
   Vz.prototype.initCanvas = function( canvasEl ) {
@@ -29,6 +30,23 @@
     animate()
     */
   };
+
+  Vz.prototype.initAudioAnalyser = function( audioEl ) {
+    
+    this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    let source = this.audioContext.createMediaElementSource(audioEl)
+    this.audioAnalyser = new AnalyserNode(this.audioContext)
+
+    this.freqs = new Uint8Array(this.audioAnalyser.frequencyBinCount)
+    this.waves = new Uint8Array(this.audioAnalyser.frequencyBinCount)
+    source.connect(this.audioAnalyser);
+    this.audioAnalyser.connect(this.audioContext.destination)
+  }
+
+  Vz.prototype.fillFreqs = function(){ 
+    this.audioAnalyser.getByteTimeDomainData(this.waves);
+    this.audioAnalyser.getByteFrequencyData(this.freqs);
+  }
 
   window.Vz = Vz;
 
