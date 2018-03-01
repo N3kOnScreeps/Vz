@@ -5,6 +5,8 @@ html {
 body {
   margin: 0;
 	font: 1rem/1.2 serif;
+  background-color: #000;
+  color: #fff;
 }
 
 .Bar {
