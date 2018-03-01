@@ -12,6 +12,8 @@
 
   <!-- Javascript -->
   <script type="text/javascript" src="vendor/jquery/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
+
   <script type="text/javascript" src="js/vz.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 
@@ -19,7 +21,7 @@
 <body>
   <div id="header" class="center">Vz</div>
 
-  <div id="contentwrapper" class="center"><audio controls src="content/fichier.mp3"></audio></div>
+  <div id="contentwrapper" class="center"><audio id="audioSource" controls src="content/fichier.mp3"></audio></div>
 
   <div id="visualizer"></div>
 </body>
