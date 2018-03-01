@@ -1,30 +1,51 @@
-#header{
-	text-align: center;
-	font-size: 3.5em;
-	position: fixed;
-	top: 0;
-	width:100%;
+html {
+  font-size: 15px;
 }
 
-#playerwrap{
-	text-align: center;
+body {
+  margin: 0;
+	font: 1rem/1.2 serif;
 }
 
-#visualizer{
-	text-align: center;
+.Bar {
 	position: absolute;
-	top:0;
-	width: 100%;
-	height:100%;
+	left: 30px;
+	bottom: 30px;
+  z-index: 2;
 }
 
-#contentwrapper{
-	border-radius: 20px;
-	background: black;
-	border:1px solid red;
-	max-width:800px;
-	width:100%;
-	min-height: 1200px;
-	margin: 600px auto 10px;
+.Bar-logo {
+	display: inline-block;
+	font-size: 3.5rem;
+	line-height: 1;
+  color: #fff;
+  text-shadow:
+    0 -1px #000,
+    0 1px #000,
+    -1px 0 #000,
+    1px 0 #000,
+    -1px -1px #000,
+    -1px 1px #000,
+    -1px 1px #000,
+    1px -1px #000;
+}
 
+.Bar-player {
+  margin-left: 25px;
+	vertical-align: bottom;
+}
+
+.Visualizer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.Visualizer canvas {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
 }

@@ -8,20 +8,28 @@
   <meta name="description" content="">
 
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="css/main.css" media="all">
-
-  <!-- Javascript -->
-  <script type="text/javascript" src="vendor/jquery/jquery.js"></script>
-  <script type="text/javascript" src="js/vz.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div id="header" class="center">Vz</div>
 
-  <div id="contentwrapper"></div>
+  <div class="Bar">
+    <div class="Bar-logo">Vz</div>
+    <audio controls src="content/fichier.mp3" class="Bar-player" id="player"></audio>
+  </div>
 
-  <div id="playerwrap"><audio controls src="content/fichier.mp3"></audio></div>
-  <div id="visualizer"><canvas width="800" height="600"></canvas></div>
+  <div class="Visualizer">
+    <canvas id="visualizer"></canvas>
+  </div>
+
+  <!-- Javascript -->
+  <script src="vendor/jquery/jquery.js"></script>
+  <script src="vendor/pixijs/pixi.js"></script>
+  <script src="js/vz.js"></script>
+  <script>
+    var canvas = document.getElementById( "visualizer" ),
+      audio = document.getElementById( "player" ),
+      Vz = new Vz( canvas, audio );
+  </script>
+
 </body>
 </html>
