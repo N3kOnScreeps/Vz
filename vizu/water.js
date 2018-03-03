@@ -39,7 +39,7 @@
     function initShapes() {
       let graphics = new PIXI.Graphics();
       graphics.beginFill(0xffffff);
-      // graphics.drawShape(0, 0, shapeRadius);
+      // graphics.drawCircle(0, 0, shapeRadius);
       graphics.drawRect(0, 0, shapeRadius, shapeRadius);
       graphics.endFill();
 
