@@ -23,15 +23,16 @@
 
   <!-- Javascript -->
   <script src="vendor/jquery/jquery.js"></script>
+  <script src="vendor/chroma/chroma.js"></script>
   <script src="vendor/pixijs/pixi.js"></script>
   <script src="vz/vz.js"></script>
-  <script src="vizu/helloworld.js"></script>
+  <script src="vizu/water.js"></script>
   <script>
     var canvas = document.getElementById( "visualizer" ),
       audio = document.getElementById( "player" ),
       vz = new Vz( canvas, audio );
 
-    vz.setVizu( 'helloworld' );
+    vz.setVizu( 'water' );
     vz.play();
   </script>
 
