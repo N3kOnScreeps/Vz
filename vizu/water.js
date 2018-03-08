@@ -2,9 +2,9 @@
 
   // Paramètres globaux pour toutes les instances de la visualisation
   // Les constantes quoi
-  let cellSize = 50,
-    shapeRadius = 60,
-    dampling = .8,
+  let cellSize = 30,
+    shapeRadius = cellSize * 1.5,
+    dampling = .9,
     blendMode = PIXI.BLEND_MODES.ADD;
 
   Vz.registerVizu( 'water', function( renderer, stage, freqs, waves ) {
@@ -17,8 +17,8 @@
       buffer1 = [], buffer2 = [],
       shapes = [],
       scale = chroma
-        .scale(['#333333','#cc0000','#ffcc00'])
-        .domain([0, .01, 1])
+        .scale(['#333333','#00569e','#0099ee'])
+        // .domain([0, .01, 1])
         .mode( 'lab' )
         .colors(100)
         .map(function(color) {
@@ -84,7 +84,7 @@
     function updateShapes() {
       let i = cellCount;
       while( i-- ) {
-        shapes[i].scale.set( buffer1[i]+1 );
+        shapes[i].scale.set( buffer1[i]/2 + 1 );
 
         let iColor = (buffer1[i] / 1.1) * 100 + .5 | 0;
         if( iColor < 0 ) iColor = 0;
